@@ -11,8 +11,10 @@
   --border-color: rgba(238, 238, 238, 1);
   --bg-hero-color: rgba(196, 196, 196, 1);
   --bg-hero-gradient: rgba(47, 48, 58, 0.4);
+  --work-box-color: rgba(47, 48, 58, 0.8);
   --icon-color: rgba(175, 177, 184, 1);
   --card-set-gap: 30px;
+  --trn-time: 2500ms;
 }
 /* цвет основного текста rgba(117, 117, 117, 1) */
 /* вторичный цвет текста #212121 */
@@ -86,11 +88,17 @@ height: auto;
 .site-nav a:focus,
 .site-nav a:active {
   color: var(--accent-color);
+  transition: color var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .site-nav .item .highlighted {
   color: var(--accent-color);
 }
-
+.site-nav a::after {
+  display: block;
+  border-bottom: 4px solid var(--accent-color); 
+  border-radius: 2px;
+}
 /* ГЕРОЙ */
 .hero {
   max-width: 1600px;
@@ -136,6 +144,7 @@ height: auto;
 .hero-button:focus {
   cursor: pointer;
   background-color: var(--hover-color);
+  transition: background-color var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* КОНТЕНТ */
 .feature-list-title {
@@ -203,6 +212,8 @@ height: auto;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  transition: background-color  var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1), box-shadow var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1), color var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .prime-button {
@@ -226,6 +237,7 @@ height: auto;
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  transition: box-shadow var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* КОНТАКТИ */
@@ -243,6 +255,7 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 .contacts a:hover,
 .contacts a:focus {
   color: var(--accent-color);
+  transition: color var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ФУТЕР */
 .footer {
@@ -256,6 +269,7 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 .contact-footer a:hover,
 .contact-footer a:focus {
   color: var(--accent-color);
+  transition: color var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1);
 }
 .street {
   font-style: normal;
@@ -441,6 +455,7 @@ html {
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  transition: box-shadow var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1);
 }
 .type-link {
   display: block;
@@ -538,6 +553,7 @@ display: flex;
   border-radius: 50%;
   background-color: var(--accent-color);
   fill: var(--white-color);
+  transition: background-color var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1), fill var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*  ПОСТОЯННЫЕ КЛИЕНТЫ */
 .client-link {
@@ -558,6 +574,7 @@ display: flex;
 .client-link:focus {
   fill: var(--accent-color);
   border-color: var(--accent-color);
+  transition: border-color var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1), fill var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients {
 display: flex;
@@ -599,6 +616,7 @@ margin-bottom: 0;
 .ft-link:hover,
 .ft-link:focus {
   background-color: var(--accent-color);
+  transition: background-color var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ft-icon-item {
   margin-top: 20px;
@@ -611,14 +629,17 @@ margin-bottom: 0;
 }
 
 
+ /* ПОЗИЦИОНИРОВАНИЕ И АНИМАЦИЯ */
+
+  /* КАРТОЧКИ РАЗРАБОТОК */
+
   .type-box-item:hover .overlay {
   transform: translatey(0);
-  
+  transition:  var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1);
   }
   .box {
     position: relative;
     overflow-y: hidden;
-  
   }
   .overlay {
   position: absolute;
@@ -639,3 +660,26 @@ margin-bottom: 0;
   letter-spacing: 0.03em;
 }
 
+/* СЕКЦИЯ ЧЕМ МЫ ЗАНИМАЕМСЯ */
+.our-work-box {
+  position: relative;
+  overflow: hidden;
+}
+.work-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: var(--work-box-color);
+  margin-top: 224px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+  font-size: 14px;
+  font-style: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
