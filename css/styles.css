@@ -613,10 +613,12 @@ margin-bottom: 0;
 
   .type-box-item:hover .overlay {
   transform: translatey(0);
+  
   }
   .box {
     position: relative;
-  overflow-y: hidden;
+    overflow-y: hidden;
+  
   }
   .overlay {
   position: absolute;
@@ -625,10 +627,9 @@ margin-bottom: 0;
   width: 100%;
   height: 100%;
   background-color: var(--overlay-color);
-  transform: translatex(-100%);
+  transform: translatey(100%);
   transition: transform 250ms ease;
-  
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   color: var(--white-color);
   font-weight:400;
   padding: 63px 24px;
