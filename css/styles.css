@@ -81,7 +81,7 @@ height: auto;
   letter-spacing: 0.02em;
   position: relative;
 }
-.site-nav a:hover::after {
+.highlighted::after {
   content: '';
   display: block;
   width: 100%;
