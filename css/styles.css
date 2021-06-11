@@ -733,26 +733,25 @@ margin-bottom: 0;
   height: 100vh;
   background-color: var(--vp-background);
   opacity: 1;
-
-  transition: opacity var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* transition-property: opacity, visibility;
-  transition-duration: var(--trn-time);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-  
-  
+  transition-property: opacity;
+  transition-duration:  var(--trn-time); 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
 }
+
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   
   transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform;
+  transition-duration: var(--trn-time);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   
   min-width: 528px;
   min-height: 581px;
