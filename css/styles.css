@@ -81,14 +81,16 @@ height: auto;
   letter-spacing: 0.02em;
   position: relative;
 }
-.site-nav a::after {
+.site-nav a:hover::after {
   content: '';
   display: block;
   width: 100%;
   height: 4px;
   background-color: var(--accent-color);
   position: absolute;
-  margin-bottom: 50px;
+  margin-top: 28px;
+  bottom: -1px;
+  border-radius: 2px;
 }
 .header .container {
   display: flex;
