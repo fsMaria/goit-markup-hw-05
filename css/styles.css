@@ -15,7 +15,7 @@
   --icon-color: rgba(175, 177, 184, 1);
   --vp-background: rgba(0, 0, 0, 0.2);
   --card-set-gap: 30px;
-  --trn-time: 2500ms;
+  --trn-time: 250ms;
   --modal-button-color: rgba(0, 0, 0, 0.1);
 }
 /* цвет основного текста rgba(117, 117, 117, 1) */
@@ -725,22 +725,24 @@ margin-bottom: 0;
 
 
 /* ....................МОДАЛЬНОЕ ОКНО................. */
-.backdroop {
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: var(--vp-background);
-  visibility: visible;
-  z-index: 9999;
-  transition-property: gackground-color;
+  opacity: 1;
+
+  transition: opacity var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* transition-property: opacity, visibility;
   transition-duration: var(--trn-time);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
- 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+  
+  
 }
-.backdroop.is-hidden {
-  visibility: hidden;
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
@@ -748,15 +750,23 @@ margin-bottom: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--trn-time) cubic-bezier(0.4, 0, 0.2, 1);
+  
+  min-width: 528px;
+  min-height: 581px;
   background-color: var(--white-color);
   border-radius: 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.close {
+
+.backdrop.is-hidden .modal {
+transform: translate(-50%, -50%) scale(0.3);
+}
+
+[data-modal-close] {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -770,3 +780,4 @@ margin-bottom: 0;
   align-items: center;
   cursor: pointer;
 }
+
