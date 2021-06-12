@@ -38,7 +38,9 @@ ul {
 a {
   text-decoration: none;
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
 }
@@ -47,9 +49,9 @@ p {
   margin: 0;
 }
 img {
-display: block;
-max-width: 100%;
-height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /*  ЛОГОТИП */
@@ -101,7 +103,7 @@ height: auto;
   color: var(--accent-color);
 }
 .highlighted::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 4px;
@@ -117,7 +119,12 @@ height: auto;
   max-width: 1600px;
   height: 600px;
   background-color: var(--bg-hero-gradient);
-  background-image: linear-gradient(to right, rgba(47, 58, 57, 0.4), rgba(47, 48, 58, 0.4)), url(../imagen/imghero.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 58, 57, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../imagen/imghero.jpg);
   text-align: center;
   background-repeat: no-repeat;
   background-position: center;
@@ -221,8 +228,6 @@ height: auto;
   transition-property: background-color, color, box-shadow;
   transition-duration: var(--trn-time);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
- 
-
 }
 .buttons:hover,
 .buttons:focus {
@@ -232,7 +237,6 @@ height: auto;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-
 }
 
 .prime-button {
@@ -254,9 +258,9 @@ height: auto;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .prime-button:hover,
-.prime-button:focus{
+.prime-button:focus {
   cursor: pointer;
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
@@ -453,7 +457,6 @@ html {
   color: var(--border-color);
   border-width: 0 1px 1px 1px;
   padding: 20px 24px;
-  
 }
 .type-box {
   display: block;
@@ -475,14 +478,14 @@ html {
   flex-basis: calc((100% - 60px) / 3);
 }
 
-.type-box-item a{
+.type-box-item a {
   transition-property: box-shadow;
   transition-duration: var(--trn-time);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .type-box-item a:hover,
 .type-box-item a:focus {
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
@@ -494,7 +497,7 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
   margin-right: 30px;
 }
 
-.type-box-item:not(:nth-last-child(-n +3)) {
+.type-box-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
 .type-box-item .type {
@@ -526,12 +529,12 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 /* СТИЛИЗАЦИЯ ИЗОБРАЖЕНИЙ И ИКОНОК */
 
 /* ИКОНКИ КОНТАКТОВ ХЕДЕРА */
- .mail-icon {
+.mail-icon {
   width: 16px;
   height: 12px;
   margin-right: 10px;
   fill: currentColor;
-} 
+}
 .phone-icon {
   width: 10px;
   height: 16px;
@@ -559,12 +562,12 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 
 /* ИКОНКИ КАРТОЧЕК */
 .team-icon {
-display: flex; 
+  display: flex;
 }
 .team-icon-list:not(:last-child) {
   margin-right: 10px;
 }
-.team-link{
+.team-link {
   width: 100%;
   height: 100%;
   display: inline-block;
@@ -585,7 +588,6 @@ display: flex;
   border-radius: 50%;
   background-color: var(--accent-color);
   fill: var(--white-color);
-  
 }
 /*  ПОСТОЯННЫЕ КЛИЕНТЫ */
 .client-link {
@@ -600,7 +602,6 @@ display: flex;
   transition-property: border-color, fill;
   transition-duration: var(--trn-time);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 .client-icon {
   width: 170px;
@@ -612,10 +613,10 @@ display: flex;
   border-color: var(--accent-color);
 }
 .clients {
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
 }
 /* ИКОНКИ ФУТЕРА */
 
@@ -627,16 +628,16 @@ margin-bottom: 0;
 .ft-box {
   margin-left: 70px;
 }
-.conect { 
+.conect {
   color: var(--white-color);
-  text-transform:  uppercase;
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.03em;
   line-height: 1.173;
 }
 
-.ft-link { 
+.ft-link {
   max-width: 100%;
   display: inline-block;
   fill: var(--white-color);
@@ -665,20 +666,20 @@ margin-bottom: 0;
   margin-right: 10px;
 }
 
+/* ПОЗИЦИОНИРОВАНИЕ И АНИМАЦИЯ */
 
- /* ПОЗИЦИОНИРОВАНИЕ И АНИМАЦИЯ */
+/* КАРТОЧКИ РАЗРАБОТОК */
 
-
-  /* КАРТОЧКИ РАЗРАБОТОК */
-
-  .type-box-item:hover .overlay {
+.type-box-item:hover .overlay {
   transform: translatey(0);
-  }
-  .box {
-    position: relative;
-    overflow-y: hidden;
-  }
-  .overlay {
+  opacity: 1;
+}
+.box {
+  position: relative;
+  overflow-y: hidden;
+}
+
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -689,9 +690,10 @@ margin-bottom: 0;
   transition-property: transform;
   transition-duration: var(--trn-time);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+  opacity: 0;
+ 
   color: var(--white-color);
-  font-weight:400;
+  font-weight: 400;
   padding: 63px 24px;
   margin: 0;
   font-size: 18px;
@@ -723,7 +725,6 @@ margin-bottom: 0;
   letter-spacing: 0.03em;
 }
 
-
 /* ....................МОДАЛЬНОЕ ОКНО................. */
 .backdrop {
   position: fixed;
@@ -734,8 +735,8 @@ margin-bottom: 0;
   background-color: var(--vp-background);
   opacity: 1;
   transition-property: opacity;
-  transition-duration:  var(--trn-time); 
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
+  transition-duration: var(--trn-time);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -747,12 +748,12 @@ margin-bottom: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  
+
   transform: translate(-50%, -50%) scale(1);
   transition-property: transform;
   transition-duration: var(--trn-time);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   min-width: 528px;
   min-height: 581px;
   background-color: var(--white-color);
@@ -762,7 +763,7 @@ margin-bottom: 0;
 }
 
 .backdrop.is-hidden .modal {
-transform: translate(-50%, -50%) scale(0.3);
+  transform: translate(-50%, -50%) scale(0.3);
 }
 
 [data-modal-close] {
@@ -779,4 +780,3 @@ transform: translate(-50%, -50%) scale(0.3);
   align-items: center;
   cursor: pointer;
 }
-
