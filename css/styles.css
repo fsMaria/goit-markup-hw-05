@@ -670,7 +670,8 @@ html {
 
 /* КАРТОЧКИ РАЗРАБОТОК */
 
-.type-box-item:hover .overlay {
+.type-link:hover .overlay,
+.type-link:focus .overlay {
   transform: translatey(0);
   opacity: 1;
 }
