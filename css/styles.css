@@ -673,7 +673,6 @@ html {
 .type-link:hover .overlay,
 .type-link:focus .overlay {
   transform: translatey(0);
-  opacity: 1;
 }
 .box {
   position: relative;
@@ -687,12 +686,11 @@ html {
   width: 100%;
   height: 100%;
   background-color: var(--overlay-color);
-  transform: translatey(100%);
+  transform: translatey(101%);
   transition-property: transform;
   transition-duration: var(--trn-time);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
- 
+
   color: var(--white-color);
   font-weight: 400;
   padding: 63px 24px;
